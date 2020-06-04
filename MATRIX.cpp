@@ -76,7 +76,6 @@ Matrix operator+(const Matrix& left, const Matrix& right)
     else
     {
         std::cout << "Матрицы разного размера";
-        exit(1);
     }
 }
 
@@ -94,7 +93,6 @@ Matrix operator-(const Matrix& left, const Matrix& right)
     else
     {
         std::cout << "Матрицы разного размера";
-        exit(1);
     }
 }
 
@@ -149,16 +147,4 @@ Matrix& Matrix::operator=(const Matrix& right)
         for (int j = 0; j < n; j++)
             a[i][j] = right.a[i][j];
     return *this;
-}
-
-void print(Matrix M)
-{
-    for (int i = 0; i < M.getSizeX(); i++)
-    {
-        for (int j = 0; j < M.getSizeY(); j++)
-        {
-            std::cout << M.getMij(i, j) << "\t";
-        }
-        std::cout << std::endl;
-    }
 }
